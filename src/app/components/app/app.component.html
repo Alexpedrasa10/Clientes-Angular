@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="../../../assets/loogo.svg">
+    </a>
+    <ul>
+      <li routerLinkActive="activo" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/"> Home </a>  
+      </li>
+      <li routerLinkActive="activo">
+        <a routerLink="/clientes"> Clientes </a>
+      </li>
+      <li routerLinkActive="activo">
+        <a routerLink="/tutorial"> Tutorial </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<footer>
+  <div class="container">
+    <h5><a href="https://alexpedrasa10.github.io/#/">Powered by <img src="../../../assets/loogo.svg" alt=""></a></h5>
+  </div>
+</footer>

@@ -1,0 +1,227 @@
+<div>
+    <div class="title-tutorial">
+        <h2>Tutorial para crear este proyecto paso a paso.</h2>
+    </div>
+    <section class="tutorial">
+        <div class="container">
+            <div class="paso">
+                <h2>1. Crear aplicación</h2>
+                <p>Utilizando CLI, crearemos un nuevo proyecto con el comando: </p>
+                <pre>
+                    <code class="language-powershell">
+                        $ ng new clientes-app
+                    </code>
+                </pre>
+                <p>Luego, accederemos a la carpeta creada y crearemos un servidor para 
+                    empezar con el desarrollo de nuestra aplicación.
+                </p>
+                <pre>
+                    <code class="language-powershell">
+                        $ ng cd clientes app
+                        $ ng serve
+                    </code>
+                </pre>
+            </div>
+            <hr>
+            <div class="paso">
+                <h2>2. Crear modulo</h2>
+                <p>Con Angular CLI crearemos un modulo con el siguiente comando: </p>
+                <pre>
+                    <code class="language-powershell">
+                        $ ng generate module clientes
+                    </code>
+                </pre>
+                <p>Y lo imporatamos en el módulo principal <span>'app.module.ts'</span></p>
+                <pre>
+                    <code class="language-typescript">
+                       {{importModule}}
+                    </code>
+                </pre>
+                <pre>
+                    <code class="language-typescript">
+                        {{importModuleinApp}}
+                    </code>
+                </pre>
+                <p>En este proyecto, utilizaremos ngModel, por lo que vamos a importar 'FormsModule',
+                    y también otras clases para poder validar nuestro formulario. 
+                </p>
+                <pre>
+                    <code class="language-typescript">
+                        {{importFormsModule}}
+                    </code>
+                </pre>
+                <p>Y lo declararemos en 'imports'.</p>
+                <pre>
+                    <code class="language-typescript">
+                        {{importsModule}}
+                    </code>
+                </pre>
+            </div>
+            <hr>
+            <div class="paso">
+                <h2>3. Crear interface</h2>
+                <p>Con esto definiremos el modelo de datos. No hay generador de este tipo de 
+                    modelo, asique vamos a crearlo de forma manual. El archivo se va a llamar:
+                    <span>cliente.model.ts</span>
+                    <br>
+                    En este archivo coloco las interfaces de TypeScript que definen los datos de mi aplicación. 
+                </p>
+                <pre>
+                    <code class="language-typescript">
+                        {{interfaceCliente}}
+                    </code>
+                </pre>
+            </div>
+            <hr>
+            <div class="paso">
+                <h2>4. Crear servicio</h2>
+                <p>Con Angular CLI crearemos un servicio usando: </p>
+                <pre>
+                    <code class="language-powershell">
+                        $ ng generate service clientes
+                    </code>
+                </pre>
+                <p>Luego, importaremos la interfaz creada en el paso anterior.</p>
+                <pre>
+                    <code class="language-typescript">
+                        {{importInterface}}
+                    </code>
+                </pre>
+                <p> Codigo completo del servicio:</p>
+                <pre>
+                    <code class="language-typescript">
+                        {{codigoService}}
+                    </code>
+                </pre>
+                <p>
+                    1. La propiedad "cliente" contiene los datos que va a mantener y la declaramos como privada
+                    para que no puedan ser tocadas directamente, solamente usando los métodos del servicio. 
+                </p>
+                <p>
+                    2. Agregar un cliente es un "push" al array de clientes, de un cliente recibido por parámetros.
+                </p>
+                <p>
+                    3. Crear un nuevo cliente es simplemente devolver un objeto que debe respetar la interfaz,
+                    ya que en la función se especifica que el objeto es de tipo Cliente.
+                </p>                
+            </div>
+            <hr>
+            <div class="paso">
+                <h2>5. Importar el servicio en el módulo</h2>
+                <p>Vamos a dirigirnos al módulo creado en el paso 2 (cliente.module.ts) y declarar el servicio.</p>
+                <pre>
+                    <code class="language-typescript">
+                        {{importService}}
+                    </code>
+                </pre>
+                <p>Y declararlo en el array providers.</p>
+                <pre>
+                    <code class="language-typescript">
+                        {{importServiceProvider}}
+                    </code>
+                </pre>
+            </div>
+            <hr>
+            <div class="paso">
+                <h2>6. Crear componente Clientes</h2>
+                <p>Crearemos el componente con CLI, en él estará nuestro formulario y el listado de clientes.</p>
+                <pre>
+                    <code class="language-powershell">
+                        $ ng generate component clientes
+                    </code>
+                </pre>
+                <p>También los importaremos en el módulo que hemos creado y delcararlo en 'declarations' y 'exports'</p>
+                <pre>
+                    <code class="language-typescript">
+                        {{componentModuleImport}}
+                    </code>
+                </pre>
+                <pre>
+                    <code class="language-typescript">
+                        {{componentModuleDeclaration}}
+                    </code>
+                </pre>
+                <p>Ahora iremos al 'app.component.html' y pondremos el tag del component</p>
+                <pre>
+                    <code class="language-html">
+                        {{appClientes}}
+                    </code>
+                </pre>
+            </div>
+            <hr>
+            <div class="paso">
+                <h2>7. TypeScript del componente </h2>
+                <p>Comenzaremos importando el servicio y el modelo de datos. </p>
+                <pre>
+                    <code class="language-typescript">
+                        {{importServideAndInterface}}
+                    </code>
+                </pre>
+                <p>También importaremos algunas clases de '@angular/forms' que nos ayudará a 
+                    validar el formulario que vamos a crear.
+                </p>
+                <pre>
+                    <code class="language-typescript">
+                        {{importFormsComponent}}
+                    </code>
+                </pre>
+                <p>Código completo del TypeScript del componente: </p>
+                <pre>
+                    <code class="language-typescript">
+                        {{codigoTypescriptComponent}}
+                    </code>
+                </pre>
+                <p>
+                    1. El componente declara 3 propiedades: el cliente, el array de todos los clientes 
+                    y la propiedad 'form' proveniente de Angular Forms.
+                </p>
+                <p>
+                    2.En el constructor, que se ejecuta lo primero, 
+                    conseguimos una instancia del servicio de clientes y de FormBuilder, 
+                    mediante la inyección de dependencias. Luego, declararemos los tipos de datos requeridos
+                    del formulario para que este sea válido.
+                </p>
+                <p>
+                    3. En el ngOnInit(), usaremos la función 'newCliente()' para la propiedad 'cliente' para que
+                    los campos que usemos esten vacíos al cargar la página, y también utilizaremos 'getClientes()'
+                    para el array de clientes para que al mandar el formulario, obtenga la lista de clientes.
+                </p>
+            </div>
+            <hr>
+            <div class="paso">
+                <h2>8. Template del componente</h2>
+                <p>Antes de pasar al template, instalaremos Bootstrap.</p>
+                <pre>
+                    <code class="language-powershell">
+                        $ npm install bootstrap jquery @popperjs/core
+                    </code>
+                </pre>
+                <p>
+                    Luego de eso nos dirigimos al archivo “angular.json” y colocamos las siguientes 
+                    instrucciones en los objetos “styles” y “scripts” en donde llamaremos a las 
+                    propiedades css del bootstrap y las dependencias scripts correspondientes a las 
+                    interacciones de cada uno.
+                </p>
+                <pre>
+                    <code class="language-json">
+                        {{bootstrapjson}}
+                    </code>
+                </pre>
+                <p>Una vez instalado, pasaremos al HTML del componente: </p>
+                <pre>
+                    <code class="language-html">
+                        {{templateComponent}}
+                    </code>
+                </pre>
+            </div>
+            <div class="paso">
+                <h2>Bonus - Estilos SCSS </h2>
+                <pre>
+                    <code class="language-scss">
+                        {{scss}}
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+</div>

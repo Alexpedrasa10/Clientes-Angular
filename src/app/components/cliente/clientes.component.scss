@@ -1,0 +1,47 @@
+$amarillo: #FBFF87;
+$violeta: #B84BFF;
+$font: 'Bebas Neue';
+
+
+*{
+    font-family: $font;
+}
+.c{
+    background: #654ea3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    section{
+        padding: 2rem;
+        .clientes{
+            padding: 1rem;
+            background: #F1F1F1;
+            box-shadow: 2px 2px 25px #333333;
+            border-bottom: 1rem;
+        }
+        .btn-form{
+            padding: 1rem;
+            border-radius: .50rem;
+            background: $amarillo;
+            color: #333333;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .btn-form:hover{
+            background: #F2D5A0;
+        }
+        .lista-clientes{
+            margin-top: 1.20rem;
+            background: #F1F1F1;
+            box-shadow: 2px 2px 25px #333333;
+            padding: 1rem;
+            li{
+                text-align: center;
+                span{
+                    margin-right: 2rem;
+                    margin-left: 2rem;
+                    text-align: center;
+                }
+            }        
+        }
+    }
+}

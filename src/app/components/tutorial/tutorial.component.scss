@@ -1,0 +1,36 @@
+@import '~prismjs/themes/prism-tomorrow.css';
+
+$violeta: #B84BFF;
+$violetaclarito: #D697FF;
+$amarillo: #FBFF87;
+$font: 'Bebas Neue';
+
+
+
+div{
+    .title-tutorial{
+        background: #654ea3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        padding: 2rem;
+        h2{
+            text-transform: uppercase;
+            font-size: 1.80rem;
+            font-weight: 550;
+            font-family: $font;
+            text-transform: uppercase;
+            text-align: center;
+            color: $amarillo;
+        }
+    }
+    .tutorial{
+        padding: 2.25rem;
+        .paso{
+            h2{
+                font-family: $font;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

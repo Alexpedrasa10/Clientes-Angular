@@ -1,0 +1,38 @@
+<div class="c">
+<section>
+    <div class="container">
+        <div class="clientes">
+            <h1>Clientes</h1>
+            <form [formGroup]="form" (ngSubmit)="enviar(form.value)">
+                <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" 
+                placeholder="Ingrese nombre" [(ngModel)]="cliente.nombre"
+                formControlName="nombre">
+                </div>
+                <div class="form-group">
+                <label>Dirección</label>
+                <input type="text" class="form-control" 
+                placeholder="Ingrese dirección" [(ngModel)]="cliente.direccion" 
+                formControlName="direccion">
+                </div>
+                <div class="form-group">
+                    <label>Edad</label>
+                    <input type="number" class="form-control" 
+                    placeholder="Ingrese edad" [(ngModel)]="cliente.edad" 
+                    formControlName="edad">
+                </div>
+                <button type="submit" [disabled]="form.invalid" class="btn-form" (click)="this.nuevoCliente()">Agregar cliente</button>
+            </form>
+        </div>
+        <div class="lista-clientes" *ngIf="clientes.length > 0">
+            <h2>Listado de clientes</h2>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let cliente of clientes">
+                    <span>{{cliente.nombre}}</span> | <span>{{cliente.direccion}}</span> | <span>{{cliente.edad}}</span>
+                </li>
+              </ul>
+        </div>
+    </div>
+</section>
+</div>

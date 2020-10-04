@@ -1,0 +1,60 @@
+//Paleta de colores
+$violeta: #B84BFF;
+$violetaclarito: #D697FF;
+$amarillo: #FBFF87;
+$font: 'Bebas Neue';
+
+*{
+    font-family: $font;
+}
+
+div{
+    background-color: $amarillo;
+    .violet{
+        background: #654ea3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        padding: 4rem;
+        h2{
+            font-size: 1.80rem;
+            font-weight: 550;
+            font-family: $font;
+            text-transform: uppercase;
+            text-align: center;
+            color: $amarillo;
+        }
+    }
+
+    .yellow{
+        padding: 5rem;
+        h5{
+            font-size: 1.80rem;
+            font-weight: 550;
+            font-family: $font;
+            text-transform: uppercase;
+            color: $violeta;
+        }
+        .botones{
+            margin-top: 1.50rem;
+            .proyecto{
+                padding: .85rem;
+                margin-right: 1rem;
+                border-radius: .50rem;
+                background: $violeta;
+                color: $amarillo;
+                text-transform: uppercase;
+            }
+            .proyecto:hover{
+                background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+            }
+            .tutorial{
+                padding: .85rem;
+                border-radius: .50rem;
+                background: none;
+                border: 2px solid $violeta;
+                color: $violeta;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
