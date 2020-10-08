@@ -7,6 +7,8 @@ import {Cliente } from './clientes/cliente.model';
 })
 export class ClientesService {
 
+  id:number = 0
+
   private clientes: Cliente[]
 
   constructor() { 
@@ -23,7 +25,9 @@ export class ClientesService {
   }
 
   newCliente() : Cliente{
+    this.id++
     return{
+      id: this.id,
       nombre: '',
       direccion: '',
       edad: null,

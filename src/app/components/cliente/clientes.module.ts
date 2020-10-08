@@ -4,12 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { ClientesComponent } from './clientes.component'
 import { ClientesService } from 'src/app/other/clientes.service';
-
+import { UppercasePipe } from '../../pipes/uppercase.pipe';
 
 
 @NgModule({
   declarations: [
-    ClientesComponent
+    ClientesComponent,
+    UppercasePipe
   ],
   imports: [
     CommonModule,
@@ -17,7 +18,8 @@ import { ClientesService } from 'src/app/other/clientes.service';
     ReactiveFormsModule
   ],
   exports: [
-    ClientesComponent
+    ClientesComponent,
+    UppercasePipe
   ],  
   providers: [
     ClientesService

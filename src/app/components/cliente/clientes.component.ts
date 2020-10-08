@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ClientesService } from '../../other/clientes.service';
 import {Cliente} from '../../other/clientes/cliente.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -34,14 +34,16 @@ export class ClientesComponent implements OnInit {
   }
 
   nuevoCliente() : void{
-    console.log(this.cliente)
     this.clienteService.addCliente(this.cliente)
     this.cliente = this.clienteService.newCliente()
-    console.log(this.clienteService.getClientes())
+    this.clientes = this.clienteService.getClientes()
+  }
+
+  borrarCliente(id: Number) : void {   
+    this.clientes = this.clientes.filter(cliente => cliente.id != id)
   }
 
   enviar(values){
-    console.log(values)
   }
 
 }

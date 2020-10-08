@@ -7,5 +7,5 @@ import { RouterLinkActive } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'routing';
+  public isMenuCollapsed = true;
 }

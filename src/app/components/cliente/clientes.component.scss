@@ -11,7 +11,8 @@ $font: 'Bebas Neue';
     background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     section{
-        padding: 2rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
         .clientes{
             padding: 1rem;
             background: #F1F1F1;
@@ -36,11 +37,7 @@ $font: 'Bebas Neue';
             padding: 1rem;
             li{
                 text-align: center;
-                span{
-                    margin-right: 2rem;
-                    margin-left: 2rem;
-                    text-align: center;
-                }
+                font-family: 'Montserrat';
             }        
         }
     }

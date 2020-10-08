@@ -13,7 +13,7 @@ import { TutorialComponent } from './components/tutorial/tutorial.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    TutorialComponent
+    TutorialComponent,
     ],
   imports: [
     BrowserModule,
